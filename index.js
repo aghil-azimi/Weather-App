@@ -96,17 +96,17 @@ window.addEventListener('load', function(){
                     deg.textContent = Math.floor(weTemp);
                     unit.textContent = 'K';
                     dese.addEventListener('click', function(e){
-                        if(unit.textContent == 'K'){
+                        if(unit.textContent == 'C'){
                             deg.textContent = getTemp(weTemp).far;
-                            unit.textContent = 'F';
+                            unit.textContent = 'K';
                         } 
-                        else if(unit.textContent == 'F'){
+                        else if(unit.textContent == 'K'){
                             deg.textContent = getTemp(weTemp).can;
-                            unit.textContent = 'C';
+                            unit.textContent = 'F';
                         }
                         else{
                             deg.textContent = getTemp(weTemp).kel;
-                            unit.textContent = 'K';
+                            unit.textContent = 'C';
                         }
                     })
                     tede.textContent = weDes;
