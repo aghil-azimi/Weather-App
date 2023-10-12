@@ -82,8 +82,8 @@ const tede = document.querySelector('.temperature-description');
 window.addEventListener('load', function(){
     getLoc()
         .then(locData => {
-            const timeZone = locData.timezone;
-            loti.textContent = timeZone;
+            console.log(locData)
+            loti.textContent = locData.timeZone;
             getWeather(locData.lat, locData.lon)
                 .then(weData => {
                     const weTemp = weData.main.temp;
