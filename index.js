@@ -9,7 +9,7 @@ const getLoc = async () => {
 }
 
 const getWeather = async (lat, lon) => {
-    api = 'f0894defae7c5584798f8812232a40c2';
+    api = '5e31ec89a626dc6b641f87e5d83d1be8';
 
     const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}`;
 
