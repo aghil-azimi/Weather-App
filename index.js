@@ -3,7 +3,7 @@ const getLoc = async () => {
     const url = 'http://ip-api.com/json/?fields=status,country,city,lat,lon,timezone';
 
     const response = await fetch(url);
-    const data = response.json();
+    const data = await response.json();
 
     return data;
 }
@@ -15,7 +15,7 @@ const getWeather = async (lat, lon) => {
 
 
     const response = await fetch(url);
-    const data = response.json();
+    const data = await response.json();
 
     return data;
 }
