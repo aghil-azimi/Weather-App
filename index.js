@@ -9,9 +9,9 @@ const getLoc = async () => {
 }
 
 const getWeather = async (lat, lon) => {
-    api = '5e31ec89a626dc6b641f87e5d83d1be8';
+   const api_key = '5e31ec89a626dc6b641f87e5d83d1be8';
 
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}`;
 
 
     const response = await fetch(url);
@@ -84,7 +84,7 @@ window.addEventListener('load', function(){
         .then(locData => {
            const timeZone = locData.timezone;
             loti.textContent = timeZone
-            getWeather(locData.lat, locData.lon)
+           return getWeather(locData.lat, locData.lon)
                 .then(weData => {
                     const weTemp = weData.main.temp;
                     const weMain = weData.weather[0].main;
